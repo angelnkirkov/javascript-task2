@@ -28,8 +28,8 @@ export default class StarWarsUniverse {
       const response = await fetch(url);
       const data = await response.json();
 
-      if (data && data.results) {
-        this.entities.push(new Entity(name, data.results));
+      if (data) {
+        this.entities.push(new Entity(name, data));
       }
     } catch (e) {
       // eslint-disable-next-line no-console
